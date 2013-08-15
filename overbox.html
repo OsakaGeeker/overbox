@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>オーバーレイサンプル</title>
+<script type="text/javascript" src="jquery.js" /></script>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="overbox.css" />
+<p><a href="javascript:void(0)" id="overlay_test1">動作サンプル1</a></p>
+<p><a href="#data" rel="overbox">動作サンプル2</a></p>
+<p><a href="img/sample2.jpg" rel="overbox">画像</a></p>
+<p><a href="https://www.google.co.jp/images/srpr/logo4w.png" rel="overbox">外部画像</a></p>
+<p><a href="ajax.html" rel="overbox">Ajax</a></p>
+<div style="display:none;width:200px;height:800px;background:#FFFFFF;animation:true;duration:5000;round:10px;" id="data">
+<input type="button" onClick="unload();" value="閉じる">
+</div>
+<div style="display:none;" id="data2">
+<input type="button" onClick="unload();" value="閉じる2">
+</div>
+<textarea cols="10" rows="100"></textarea>
+<script type="text/javascript" src="overbox.js" /></script>
+<script type="text/javascript">
+$(function() {
+	$('a#overlay_test1').overlay('#data',
+	{
+		background:'#FFFFFF',
+		width:'200px',
+		height:'150px',
+	    padding:'10px',
+	    animation:true,
+	    duration:1000,
+	    remove: true
+	});
+});
+
+</script>
+<div class="box sample">
+    <p>sample text sample text</p>
+</div>
+</body>
+</html>
